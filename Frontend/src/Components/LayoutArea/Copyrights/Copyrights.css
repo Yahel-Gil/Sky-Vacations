@@ -1,0 +1,24 @@
+.Copyrights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    color: #70757a; 
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.Copyrights p {
+    margin: 0;
+    letter-spacing: 0.2px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+    /* Reduce padding for smaller screens */
+    .Copyrights {
+        padding: 16px 0;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+}

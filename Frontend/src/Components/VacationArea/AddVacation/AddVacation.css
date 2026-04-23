@@ -1,0 +1,151 @@
+/* Page Setup - Consistent with Edit page */
+.add-container-wrapper {
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-color: #ffffff; /* Page is white */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+/* The Form Card - Gray style matching menu */
+.AddPaper {
+    position: relative;
+    width: 100%;
+    padding: 60px 48px 48px 48px !important;
+    border-radius: 28px !important;
+    background-color: #f8f9fa !important; /* Soft gray */
+    border: 1px solid #dadce0 !important;
+    box-shadow: none !important;
+}
+
+/* Internal Back Button */
+.add-back-btn-inside {
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    background-color: #ffffff !important;
+    border: 1px solid #dadce0 !important;
+    color: #5f6368 !important;
+    transition: all 0.2s ease !important;
+}
+
+.add-back-btn-inside:hover {
+    background-color: #f1f3f4 !important;
+    transform: translateX(-3px);
+}
+
+.add-main-title {
+    font-weight: 700 !important;
+    text-align: center;
+    margin-bottom: 40px !important;
+    color: #202124 !important;
+    letter-spacing: -0.5px;
+}
+
+/* Input Fields */
+.add-text-field {
+    margin-bottom: 24px !important;
+}
+
+.add-text-field .MuiOutlinedInput-root {
+    border-radius: 12px !important;
+    background-color: #ffffff;
+}
+
+.add-date-group {
+    display: flex;
+    gap: 16px;
+}
+
+/* Image Preview & Upload */
+.image-add-section {
+    text-align: center;
+    margin: 32px 0;
+}
+
+.preview-image-container {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    border: 1px solid #dadce0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.add-preview-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.add-upload-btn {
+    border-radius: 10px !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    color: #1a73e8 !important;
+    border-color: #dadce0 !important;
+    padding: 10px !important;
+}
+
+.add-upload-btn.upload-error {
+    border-color: #d32f2f !important;
+    color: #d32f2f !important;
+}
+
+.error-caption {
+    color: #d32f2f !important;
+    display: block;
+    margin-top: 8px !important;
+    font-size: 0.75rem !important;
+}
+
+/* Submit Button */
+.save-button {
+    padding: 12px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    background-color: #1a73e8 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+}
+
+.save-button:hover {
+    background-color: #1765cc !important;
+}
+
+/* --- Mobile Responsiveness Optimization --- */
+@media (max-width: 600px) {
+    .add-container-wrapper {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .AddPaper {
+        padding: 80px 16px 40px 16px !important; /* Spacing for back button */
+        border-radius: 0 !important; /* Edge-to-edge for mobile */
+        border: none !important;
+        background-color: #ffffff !important; /* White looks cleaner on small screens */
+    }
+
+    .add-main-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 24px !important;
+    }
+
+    /* Stack date pickers vertically */
+    .add-date-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .add-text-field {
+        margin-bottom: 16px !important;
+    }
+
+    .preview-image-container {
+        height: 160px; /* Reduced height to keep save button visible */
+        border-radius: 12px;
+    }
+}

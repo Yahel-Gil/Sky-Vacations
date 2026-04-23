@@ -1,0 +1,71 @@
+.UserMenu {
+    display: flex;
+    align-items: center;
+}
+
+.user-logged-in {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.separator {
+    color: #ccc;
+    margin: 0 5px;
+}
+
+.menu-link {
+    text-decoration: none; 
+    color: inherit;
+}
+
+/* --- Mobile Responsiveness for UserMenu --- */
+@media (max-width: 600px) {
+    .user-logged-in {
+        gap: 6px !important;
+    }
+
+    /* 1. Show only "Hello [First Name]" 
+       We limit the width so the last name is pushed out and hidden */
+    .user-logged-in p {
+        font-size: 0.85rem !important;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        /* Adjusting width to roughly fit "Hello" + one name */
+        max-width: 90px; 
+    }
+
+    /* 2. Hide the separator */
+    .separator {
+        display: none !important;
+    }
+
+    /* 3. Transform Logout Button to Icon Only */
+    .user-logged-in .menu-link button {
+        min-width: unset !important;
+        padding: 4px !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50% !important;
+    }
+
+    /* Hide the text "Logout" inside the MUI Button */
+    .user-logged-in .menu-link button {
+        color: #d32f2f !important; /* Keep the error color */
+        font-size: 0 !important; /* This effectively hides the text */
+    }
+
+    /* Make sure the icon stays visible and centered */
+    .user-logged-in .menu-link button .MuiButton-startIcon {
+        margin: 0 !important;
+        font-size: 1.2rem !important;
+        display: inline-flex !important;
+    }
+
+    /* Adjust Avatar size */
+    .user-logged-in .MuiAvatar-root {
+        width: 28px !important;
+        height: 28px !important;
+    }
+}

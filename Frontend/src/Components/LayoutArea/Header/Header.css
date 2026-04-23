@@ -1,0 +1,67 @@
+.Header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header .LogoContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Header .LogoIcon {
+    width: 40px;
+    height: 40px;
+    background-color: #1a73e8; 
+    color: white;
+    border-radius: 8px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 2px 4px rgba(26, 115, 232, 0.3);
+}
+
+.Header .AppTitle {
+    font-family: 'Google Sans', 'Roboto', sans-serif !important;
+    font-weight: 500 !important;
+    color: #3c4043; 
+    letter-spacing: -0.5px;
+}
+
+.Header .ActionsContainer {
+    display: flex;
+    align-items: center;
+}
+
+.Header h5 {
+    margin: 0;
+}
+
+/* --- Mobile Responsiveness for Header --- */
+@media (max-width: 600px) {
+    /* Make the whole header shorter */
+    .MainHeader {
+        height: 56px !important;
+        padding: 0 12px !important;
+    }
+
+    /* Hide the App Title text on very small screens to save space, or just shrink it */
+    .Header .AppTitle {
+        font-size: 1rem !important;
+        display: none; /* Optional: hide text and keep only logo icon on mobile */
+    }
+
+    .Header .LogoIcon {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Target the user greeting specifically to hide it */
+    .Header h5 {
+        display: none !important; /* Hides "Hello rafi Gil" */
+    }
+}

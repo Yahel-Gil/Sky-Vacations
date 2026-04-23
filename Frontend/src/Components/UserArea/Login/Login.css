@@ -1,0 +1,68 @@
+.Login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.Login .FormTitle {
+    color: white !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    text-align: center;
+}
+
+.Login form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Customizing MUI TextField for dark glass theme: */
+.CustomTextField .MuiOutlinedInput-root {
+    color: white !important;
+    border-radius: 12px !important;
+}
+
+.CustomTextField .MuiInputLabel-root {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.CustomTextField .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.CustomTextField:hover .MuiOutlinedInput-notchedOutline {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.CustomTextField .Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1976d2 !important; 
+}
+
+/* Error messages color: */
+.CustomTextField .Mui-error .MuiOutlinedInput-notchedOutline {
+    border-color: #ff5252 !important;
+}
+
+.CustomTextField .MuiFormHelperText-root {
+    color: #ff5252 !important;
+}
+
+/* Styled Submit Button: */
+.Login .SubmitBtn {
+    height: 50px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    text-transform: none !important;
+    font-size: 1.1rem !important;
+    background-color: #1976d2 !important;
+    margin-top: 10px !important;
+    box-shadow: 0 4px 14px rgba(25, 118, 210, 0.4) !important;
+}
+
+.Login .SubmitBtn:hover {
+    background-color: #1565c0 !important;
+}

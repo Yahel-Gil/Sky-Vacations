@@ -1,0 +1,129 @@
+:root {
+    --google-bg: #f8f9fa;
+    --google-card: #ffffff;
+    --google-border: #dadce0;
+    --google-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+    --border-radius-lg: 24px; 
+}
+
+/* Base style for the whole app */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--google-bg);
+    font-family: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Layout Wrapper */
+.Layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Top Header */
+.MainHeader {
+    height: 64px;
+    background-color: var(--google-card);
+    border-bottom: 1px solid var(--google-border);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Container for Menu + Content */
+.AppBody {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Left Sidebar Menu */
+.SideNav {
+    width: 280px;
+    background-color: var(--google-bg);
+    padding: 24px 12px;
+    border-right: 1px solid transparent;
+}
+
+/* Main Content Area */
+.MainContent {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background-color: var(--google-bg);
+}
+
+/* The "White Card" for the actual page content */
+.ContentCard {
+    background-color: var(--google-card);
+    border-radius: var(--border-radius-lg);
+    min-height: calc(100% - 48px);
+    padding: 32px;
+    border: 1px solid var(--google-border);
+    box-sizing: border-box; /* Ensures padding doesn't break the layout */
+}
+
+/* Footer Style */
+.MainFooter {
+    padding: 5px;
+    text-align: center;
+    background-color: var(--google-bg);
+    color: #5f6368;
+    font-size: 0.875rem;
+}
+
+/* Authentication Layout Containers */
+.AuthContainer {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+}
+
+.AuthContent {
+    width: 100%;
+    height: 100%;
+    display: block; 
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    /* Switch to vertical layout */
+    .AppBody {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    /* Adjust sidebar to top position */
+    .SideNav {
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        border-right: none;
+        border-bottom: 1px solid var(--google-border);
+    }
+
+    /* Content area padding adjustment */
+    .MainContent {
+        padding: 12px;
+        overflow-y: visible; 
+    }
+
+    /* Flatten the content card for smaller screens */
+    .ContentCard {
+        padding: 16px;
+        border-radius: 16px;
+        min-height: auto;
+    }
+
+    /* Compact header for mobile */
+    .MainHeader {
+        padding: 0 16px;
+        height: 56px; 
+    }
+}

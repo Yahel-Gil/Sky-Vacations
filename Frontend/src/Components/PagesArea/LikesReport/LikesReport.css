@@ -1,0 +1,60 @@
+.LikesReport {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px;
+}
+
+.LikesReport .Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.LikesReport .ChartContainer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Optional styling for the button if not using bootstrap */
+.LikesReport .btn-success {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* --- Mobile Professional Layout (No Scrolling) --- */
+@media (max-width: 768px) {
+    .LikesReport {
+        margin: 10px;
+        padding: 16px;
+        height: auto; /* Let the content dictate the height */
+    }
+
+    .LikesReport .Header {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .LikesReport .ChartContainer {
+        width: 100%;
+        /* Increase height dynamically based on the number of items */
+        min-height: 500px; 
+        overflow-x: hidden; /* No more horizontal scroll */
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Adjusting labels font size */
+    .recharts-cartesian-axis-tick-value {
+        font-size: 11px !important;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,101 @@
+/* --- Desktop Styles --- */
+.Menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 8px;
+}
+
+.Menu a {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    text-decoration: none;
+    color: #3c4043;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0 24px 24px 0; 
+    transition: background-color 0.15s;
+    margin-right: 12px;
+}
+
+.Menu a:hover {
+    background-color: #f1f3f4;
+}
+
+.Menu a.active {
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+.Menu a[href="/about"] {
+    margin-top: 12px;
+    position: relative;
+}
+
+.Menu a[href="/about"]::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 24px;
+    right: 24px;
+    border-top: 1px solid #dadce0;
+}
+
+/* --- Mobile Professional Bottom Navigation --- */
+@media (max-width: 768px) {
+    .Menu {
+        flex-direction: row !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        background-color: #ffffff !important;
+        height: 65px !important;
+        padding: 0 !important;
+        gap: 0 !important;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08) !important;
+        z-index: 1000 !important;
+        justify-content: space-around !important;
+        border-top: 1px solid #f1f3f4;
+    }
+
+    .Menu a {
+        flex-direction: column !important; /* Stack Icon on top of text if you use icons */
+        justify-content: center !important;
+        height: 100% !important;
+        flex: 1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        font-size: 0.75rem !important; /* Smaller text for bottom bar */
+        text-align: center;
+        gap: 4px;
+    }
+
+    /* Active indicator for mobile bar */
+    .Menu a.active {
+        background-color: transparent !important;
+        color: #1a73e8 !important;
+    }
+
+    .Menu a.active::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #1a73e8;
+        border-radius: 0 0 4px 4px;
+    }
+
+    /* Reset desktop-specific styles */
+    .Menu a[href="/about"] {
+        margin-top: 0 !important;
+    }
+
+    .Menu a[href="/about"]::before {
+        display: none !important;
+    }
+}

@@ -1,0 +1,165 @@
+/* Page Setup */
+.mcp-container-wrapper {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: #ffffff; /* White background */
+    min-height: 100vh;
+}
+
+/* Floating White Paper Style */
+.McpPaper {
+    width: 100%;
+    padding: 50px !important;
+    border-radius: 32px !important;
+    background-color: #ffffff !important; /* White on White */
+    border: 1px solid rgba(0, 0, 0, 0.03) !important; /* Almost invisible border */
+    
+    /* The "Floating" effect - Deep soft shadow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+    
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mcp-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mcp-icon {
+    font-size: 56px !important;
+    color: #1a73e8;
+    margin-bottom: 12px;
+    filter: drop-shadow(0 4px 8px rgba(26, 115, 232, 0.2));
+}
+
+.mcp-main-title {
+    font-weight: 800 !important;
+    color: #1a202c !important;
+    letter-spacing: -0.8px;
+    margin-bottom: 8px !important;
+}
+
+.mcp-subtitle {
+    color: #718096 !important;
+    font-weight: 500;
+}
+
+/* Input Area */
+.mcp-input-group {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.has-answer .mcp-input-group {
+    margin-bottom: 40px;
+}
+
+.mcp-text-field .MuiOutlinedInput-root {
+    border-radius: 16px !important;
+    background-color: #f8f9fa; /* Slight off-white for the inputs to pop */
+    transition: all 0.2s ease;
+}
+
+.mcp-text-field .MuiOutlinedInput-root:hover {
+    background-color: #f1f3f4;
+}
+
+.mcp-query-btn {
+    height: 56px !important;
+    min-width: 140px !important;
+    border-radius: 16px !important;
+    text-transform: none !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #1a73e8, #0d47a1) !important;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3) !important;
+}
+
+/* Result Section - Floating slightly inside */
+.mcp-result-section {
+    margin-top: 24px;
+    padding: 32px;
+    background-color: #f8faff; /* Very light blue tint */
+    border-radius: 24px;
+    border: 1px solid #e3f2fd;
+}
+
+.mcp-result-header {
+    color: #1a73e8;
+    font-weight: 800 !important;
+    font-size: 1.1rem !important;
+}
+
+.mcp-result-content {
+    line-height: 1.8;
+    color: #2d3748;
+    font-size: 1.05rem;
+}
+
+.mcp-result-content h3 {
+    color: #0d47a1;
+    margin-top: 0;
+}
+
+/* --- Mobile Responsiveness for MCP --- */
+@media (max-width: 768px) {
+    .mcp-container-wrapper {
+        padding: 20px 12px !important;
+    }
+
+    .McpPaper {
+        padding: 32px 20px !important;
+        border-radius: 24px !important;
+        height: auto !important; /* Allow paper to grow with content */
+    }
+
+    .mcp-header {
+        margin-bottom: 24px;
+    }
+
+    .mcp-main-title {
+        font-size: 1.5rem !important;
+    }
+
+    /* Fix for the crushed input from your screenshot */
+    .mcp-input-group {
+        flex-direction: column !important; /* Stack vertically to give width */
+        align-items: stretch !important;
+        gap: 16px !important;
+        width: 100% !important;
+    }
+
+    .mcp-text-field {
+        width: 100% !important;
+    }
+
+    /* Ensuring the box expands vertically */
+    .mcp-text-field .MuiOutlinedInput-root {
+        height: auto !important; 
+        min-height: 60px !important;
+        padding: 14px !important;
+        border-radius: 16px !important;
+    }
+
+    .mcp-query-btn {
+        width: 100% !important;
+        height: 54px !important;
+        border-radius: 16px !important;
+        font-size: 1rem !important;
+    }
+
+    /* Result area auto-expansion */
+    .mcp-result-section {
+        margin-top: 24px;
+        padding: 20px 16px !important;
+        height: auto !important;
+        min-height: 100px !important;
+        overflow: visible !important;
+    }
+
+    .mcp-result-content {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        word-break: break-word !important; /* Prevents long words from stretching the box */
+    }
+}

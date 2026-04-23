@@ -1,0 +1,104 @@
+/* Page Background - Pure White */
+.about-container-wrapper {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Floating White Card: */
+.AboutPaper {
+    width: 100%;
+    padding: 60px 48px 48px 48px !important;
+    border-radius: 32px !important;
+    background-color: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+    
+    /* Deep soft shadow for that "Airy" floating feel: */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+    
+    transition: transform 0.3s ease;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.about-icon {
+    font-size: 56px !important;
+    color: #1a73e8;
+    margin-bottom: 12px;
+}
+
+.about-main-title {
+    font-weight: 800 !important;
+    color: #1a202c !important;
+    letter-spacing: -0.8px;
+}
+
+.about-divider {
+    margin: 32px 0 !important;
+    background-color: #f1f3f4 !important;
+}
+
+/* Content Styling: */
+.about-content {
+    line-height: 1.8;
+    color: #4a5568;
+    text-align: center;
+}
+
+.about-content strong {
+    color: #1a73e8;
+}
+
+/* Internal Callout Box: */
+.about-mission-box {
+    margin-top: 40px;
+    padding: 32px;
+    background-color: #f8faff; /* Subtly tinted blue */
+    border-radius: 24px;
+    border: 1px solid #e3f2fd;
+}
+
+.mission-title {
+    color: #1a73e8;
+    font-weight: 800 !important;
+    margin-bottom: 12px !important;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .about-container-wrapper {
+        padding: 20px 12px; /* Less top padding for mobile */
+    }
+
+    .AboutPaper {
+        padding: 40px 20px 32px 20px !important; /* Tightened internal padding */
+        border-radius: 24px !important;
+    }
+
+    .about-icon {
+        font-size: 44px !important; /* Slightly smaller icon */
+    }
+
+    .about-main-title {
+        font-size: 1.75rem !important; /* Scale down the main heading */
+    }
+
+    .about-content {
+        font-size: 0.95rem; /* Better readability on small screens */
+        line-height: 1.6;
+    }
+
+    .about-mission-box {
+        padding: 24px 16px;
+        margin-top: 24px;
+        border-radius: 20px;
+    }
+
+    .mission-title {
+        font-size: 1.4rem !important;
+    }
+}

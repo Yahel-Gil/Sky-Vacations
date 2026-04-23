@@ -1,0 +1,171 @@
+/* Page Setup */
+.ai-container-wrapper {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    background-color: #ffffff; /* Page background is pure white */
+    min-height: 100vh;
+}
+
+/* Floating White Card Effect */
+.AIPaper {
+    width: 100%;
+    padding: 50px !important;
+    border-radius: 32px !important;
+    background-color: #ffffff !important; /* Card is white */
+    border: 1px solid rgba(0, 0, 0, 0.03) !important;
+    
+    /* Soft Deep Shadow for the floating look */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+    
+    /* Smooth transition for when recommendation arrives and paper expands */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ai-main-title {
+    font-weight: 800 !important;
+    text-align: center;
+    margin-bottom: 32px !important;
+    color: #1a202c !important;
+    letter-spacing: -0.8px;
+}
+
+/* Input Group */
+.ai-input-group {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 8px;
+    align-items: flex-start;
+}
+
+.has-recommendation .ai-input-group {
+    margin-bottom: 40px;
+}
+
+.ai-text-field .MuiOutlinedInput-root {
+    border-radius: 16px !important;
+    background-color: #f8f9fa; /* Slight off-white to distinguish the input */
+}
+
+.ai-text-field .MuiOutlinedInput-root:hover {
+    background-color: #f1f3f4;
+}
+
+/* Action Button */
+.ai-plan-btn {
+    height: 56px !important;
+    padding: 0 32px !important;
+    border-radius: 16px !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    background: linear-gradient(135deg, #1a73e8, #0d47a1) !important;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3) !important;
+}
+
+.ai-plan-btn:hover {
+    box-shadow: 0 6px 16px rgba(26, 115, 232, 0.4) !important;
+}
+
+/* Recommendation Results Box */
+.recommendation-result {
+    text-align: left;
+    margin-top: 24px;
+    padding: 32px;
+    background-color: #f8faff; /* Very light blue background for the result */
+    border-radius: 24px;
+    border: 1px solid #e3f2fd;
+}
+
+.result-header {
+    color: #1a73e8;
+    font-weight: 800 !important;
+    margin-bottom: 16px !important;
+}
+
+.result-content {
+    line-height: 1.8;
+    color: #2d3748;
+    font-size: 1.05rem;
+}
+
+/* Styling for content like bold text or images inside AI response */
+.result-content strong {
+    color: #0d47a1;
+}
+
+.result-content img {
+    max-width: 100%;
+    border-radius: 16px;
+    margin-top: 16px;
+}
+/* --- Mobile Responsiveness for AI Advisor --- */
+@media (max-width: 768px) {
+    .ai-container-wrapper {
+        padding: 20px 12px !important;
+    }
+
+    /* Adjusting the main floating card */
+    .AIPaper {
+        padding: 32px 20px !important;
+        border-radius: 24px !important;
+        height: auto !important; /* Allow expansion */
+    }
+
+    .ai-main-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 24px !important;
+    }
+
+    /* Fix for input group to prevent crushing */
+    .ai-input-group {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+
+    .ai-text-field {
+        width: 100% !important;
+    }
+
+    /* Ensuring vertical growth for text area */
+    .ai-text-field .MuiOutlinedInput-root {
+        height: auto !important;
+        min-height: 56px !important;
+        padding: 14px !important;
+        border-radius: 16px !important;
+    }
+
+    /* Action button full width */
+    .ai-plan-btn {
+        width: 100% !important;
+        height: 52px !important;
+        padding: 0 !important;
+        order: 2; /* Ensures button is below the text field */
+    }
+
+    /* Result box expansion and readability */
+    .recommendation-result {
+        margin-top: 24px;
+        padding: 24px 16px !important;
+        border-radius: 20px !important;
+        height: auto !important; /* Expansion fix */
+        overflow: visible !important;
+    }
+
+    .result-header {
+        font-size: 1.2rem !important;
+        text-align: center;
+    }
+
+    .result-content {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        word-break: break-word !important;
+    }
+
+    /* Ensure AI images don't overflow the screen */
+    .result-content img {
+        width: 100% !important;
+        height: auto !important;
+        margin-top: 12px;
+    }
+}
