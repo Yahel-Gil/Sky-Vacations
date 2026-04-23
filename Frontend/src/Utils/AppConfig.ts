@@ -19,7 +19,7 @@ class AppConfig {
     
 
 
-    // MCP Routes:
+    // MCP Route:
     public readonly mcpServerUrl = "https://unexcusably-pestilential-shaunta.ngrok-free.dev/sse";
      
 
