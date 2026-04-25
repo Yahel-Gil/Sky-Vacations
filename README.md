@@ -7,8 +7,8 @@ This is a comprehensive vacation management system featuring a React frontend, N
 Source Code: [https://github.com/Yahel-Gil/Project3](https://github.com/Yahel-Gil/Project3)
 
 ## How to Run (Docker)
-To start the entire environment, simply run:
-`docker compose up --build`
+To start the entire environment in the background, simply run:
+`docker compose up -d --build`
 
 ## Technologies Used
 * **Frontend:** React, TypeScript, Material UI
