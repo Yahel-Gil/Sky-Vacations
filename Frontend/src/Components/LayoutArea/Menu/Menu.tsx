@@ -19,7 +19,7 @@ export function Menu() {
             {user && user.roleId === 2 && (
                 <>
                     <NavLink to="/ai-recommendations">AI Recommendations</NavLink>
-                    <NavLink to="/mcp-support">MCP Support</NavLink>
+                    <NavLink to="/mcp-support">AI Data Analyst</NavLink>
                 </>
             )}
 

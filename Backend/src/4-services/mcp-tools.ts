@@ -30,12 +30,12 @@ class McpTools {
     }
 
     // Get tool result for vacation statistics:
-public async getVacationStatsTool(): Promise<CallToolResult> {
+    public async getVacationStatsTool(): Promise<CallToolResult> {
 
-    console.log("starting getVacationStatsTool");
+        console.log("starting getVacationStatsTool");
 
-    // Get all vacations:
-    const vacations = await vacationsService.getAllVacations(0);
+        // Get all vacations:
+        const vacations = await vacationsService.getAllVacations(0);
 
         // 1. Calculate sum of prices using a simple loop:
         let sum = 0;
