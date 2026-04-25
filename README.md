@@ -1,0 +1,18 @@
+# Sky Vacations - Full Stack Project
+
+## Project Overview
+This is a comprehensive vacation management system featuring a React frontend, Node.js backend, and MySQL database. The project includes AI-driven features like vacation recommendations and a smart data analyst.
+
+## GitHub Repository
+Source Code: [https://github.com/Yahel-Gil/Project3](https://github.com/Yahel-Gil/Project3)
+
+## How to Run (Docker)
+To start the entire environment, simply run:
+`docker compose up --build`
+
+## Technologies Used
+* **Frontend:** React, TypeScript, Material UI
+* **Backend:** Node.js, Express
+* **Database:** MySQL
+* **DevOps:** Docker, Docker Compose
+* **AI:** OpenAI GPT-4o-mini & MCP Server
